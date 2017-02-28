@@ -26,7 +26,7 @@ void menu() {
 	printf("\n9. Find the difference from average value");
 	printf("\n10. Sequetial Search");
 	printf("\n11. Binary Search");
-	printf("\n12. ");
+	printf("\n12. "); 
 	printf("\n13. Display array");
 	printf("\n14. Exit");
 	do {
@@ -90,11 +90,18 @@ void displayResult (int i) {
 			break;
 		}
 		case 7: {
-			_averagedValue();
+			printf("\nAverage Value: %f",_averagedValue());
 			break;
 		}
 		case 8: {
-			_differenceTwoValues();
+			int i1, i2;
+			do {
+				printf("\nThe index of the first element: ");
+				scanf("%d",&i1);
+				printf("\nThe index of the second element: ");
+				scanf("%d",&i2);
+			} while(i1 < 0 || i1 >= count || i2 < 0 || i2 >= count);
+			printf("\nDifference between two value: %f", _differenceTwoValues(i1,i2));
 			break;
 		}
 		case 9: {
